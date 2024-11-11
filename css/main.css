@@ -1,0 +1,365 @@
+body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    height: calc(100vh - 56px);
+    padding-top: 20px;
+}
+
+.editor-panel, .preview-panel {
+    height: 100%;
+}
+
+#editor {
+    height: 100%;
+    border: 1px solid #ddd;
+}
+
+.preview-container {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.CodeMirror {
+    height: 100% !important;
+}
+
+/* Estilos para el preview de documentación */
+.endpoint-card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.endpoint-header {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.endpoint-body {
+    padding: 15px;
+}
+
+.method-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.method-get { background-color: #61affe; }
+.method-post { background-color: #49cc90; }
+.method-put { background-color: #fca130; }
+.method-delete { background-color: #f93e3e; }
+
+/* Estilos para el cliente HTTP */
+.header-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.header-row input {
+    flex: 1;
+}
+
+.remove-header {
+    cursor: pointer;
+}
+
+/* Añadir estos estilos al final del archivo existente */
+
+.api-metadata {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.resource-card {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.resource-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.resource-header h3 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.resource-description {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.action-card {
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.action-header {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.action-title {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.action-description {
+    padding: 15px;
+}
+
+.parameters-section,
+.requests-section,
+.responses-section {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.response-item {
+    margin-bottom: 15px;
+}
+
+.response-header {
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+.response-code {
+    font-weight: bold;
+}
+
+.response-type {
+    margin-left: 10px;
+    color: #666;
+}
+
+pre code {
+    display: block;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    overflow-x: auto;
+}
+
+/* Añadir estos estilos */
+
+/* Tema Pastel */
+:root {
+    --pastel-primary: #a8d8ea;
+    --pastel-secondary: #aa96da;
+    --pastel-success: #a8e6cf;
+    --pastel-warning: #fdffab;
+    --pastel-danger: #ffd3b6;
+    --pastel-bg: #ffffff;
+    --pastel-text: #3f4d67;
+    --pastel-border: #dce1e8;
+}
+
+body {
+    color: var(--pastel-text);
+    background-color: var(--pastel-bg);
+}
+
+/* Layout Flex */
+.documentation-flex-container {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+
+/* Navegación */
+.api-navigation {
+    width: 300px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--pastel-border);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-section {
+    margin-bottom: 15px;
+}
+
+.nav-section > a {
+    font-weight: bold;
+    color: var(--pastel-text);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.nav-resources {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0;
+}
+
+.nav-resource > a {
+    color: var(--pastel-text);
+    text-decoration: none;
+    display: block;
+    padding: 3px 0;
+}
+
+.nav-actions {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0;
+}
+
+.nav-action > a {
+    color: var(--pastel-text);
+    text-decoration: none;
+    display: block;
+    padding: 3px 0;
+    font-size: 0.9em;
+}
+
+/* Contenido principal */
+.documentation-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Actualizar colores de los métodos HTTP */
+.method-get { background-color: var(--pastel-primary); }
+.method-post { background-color: var(--pastel-success); }
+.method-put { background-color: var(--pastel-warning); }
+.method-delete { background-color: var(--pastel-danger); }
+
+/* Estilos para el modal de respuesta */
+.response-section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--pastel-border);
+    border-radius: 4px;
+    background-color: #f8f9fa;
+}
+
+.response-status {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.response-status.success {
+    color: #28a745;
+}
+
+.response-status.error {
+    color: #dc3545;
+}
+
+.response-metadata {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.response-metadata-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.response-metadata-label {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.response-metadata-value {
+    font-weight: bold;
+}
+
+.response-headers {
+    margin-bottom: 10px;
+}
+
+.response-body {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* Añadir estos estilos para los parámetros y requests */
+.parameters-section table {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.parameters-section th {
+    background-color: var(--pastel-bg);
+    font-weight: 600;
+}
+
+.parameters-section td code {
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.request-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--pastel-border);
+    border-radius: 4px;
+}
+
+.request-content-type {
+    font-family: monospace;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.request-headers,
+.request-body {
+    margin-top: 15px;
+}
+
+.request-headers h6,
+.request-body h6 {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.request-headers pre,
+.request-body pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0;
+} 
